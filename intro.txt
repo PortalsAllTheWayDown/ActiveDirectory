@@ -1,0 +1,39 @@
+Microsoft Active Directory is the backbone of the corporate world.
+It simplifies the management of devices and users within a corporate environment.
+
+When a company grows to hundreds of users you cant manually configure all computers users and groups and policies.
+You need to use a Windows domain, a group of users and computers under the administration of a given business.
+The main idea behind a domain is to centralise the administration of common components of a windows computer network in a single repository called active directory.
+The server that runs the active directory services is known as a domain controller.
+
+Main advantages of having a configured windows domain are:
+    -Centralised identity management: All users across the network can be configured from Active Directory with minimum effort.
+    -Managing security policies: You can configure security policies directly from Active Directory and apply them to users and computers across the network as needed.
+
+Example:
+You can login to any machine at your school or company , your credentials dont need to exist in each machine available on the premesis.
+Your credentials are valid for all machines because whenever you input them on a machine, it will forward the authentication process back to the Active Directory, where your credentials will be checked.
+Thanks to Active Directory, your credentials dont need to exist in each machine and are available throughout the network.
+
+Active Directory is also the component that allows your admin to restrict you from accessing the control panel on your machine.
+Policies will usually be deployed throughout the network so that you dont have administrative privileges over those computers.
+
+The core of any windows domain is the active directory domain service (AD DS)
+
+Users:
+Users are one of the most common onject types in Active Directory. Users are one of the objects known as security principals, meaning that they can be authenticated by the domain and can be assigned privileges over a resources like files or printers.
+A security principal is an object that can act upon resources in the network.
+
+Users can be used to represent two types of entities:
+-People: users will generally represent persons in your organization that need that need to access the network, like employees.
+-Service: you can also define users to be used by services like IIS or MSSQL. Every single service requires a user to run, but service users are different from regular users as they will only have the privileges needed to run their specific service.
+
+Machines:
+Another type of object within Active Directory; for every computer that joins the Active Directory domain, a machine object will be created.
+Machines are also considered "security principals" and are assinged an account just as any regular user.
+This account has somewhat limited rights within the domain itself.
+Machine account passwords are automatically rotated out and are generally comprised of 120 random characters.
+The machine account name is the omupters name followed by a dollar sign.
+For example, a machine named DC01 will have a machine account called DC01$
+
+Security Groups:
